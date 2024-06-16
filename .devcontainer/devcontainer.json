@@ -7,32 +7,20 @@
       "extensions": [
         "ms-python.python",
         "ms-vscode.live-server",
-        "grapecity.gc-excelviewer",
         "mtxr.sqltools",
         "visualstudioexptteam.vscodeintellicode",
         "cweijan.vscode-database-client2",
-        "ms-azuretools.vscode-docker",
-        "ms-vscode-remote.remote-containers"
+        "ms-azuretools.vscode-docker"
       ],
       "settings": {
-        "terminal.integrated.profiles.linux": {
-          "frappe bash": {
-            "path": "/bin/bash"
-          }
-        },
-        "terminal.integrated.defaultProfile.linux": "frappe bash",
+        "terminal.integrated.defaultProfile.linux": "bash",
         "debug.node.autoAttach": "disabled"
       }
     }
   },
   "dockerComposeFile": "./docker-compose.yml",
   "service": "frappe",
-  "workspaceFolder": "/workspace/development",
+  "workspaceFolder": "/workspace/frappe-bench",
   "shutdownAction": "stopCompose",
-  "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/frappe/.ssh,type=bind,consistency=cached"
-  ],
-  "postCreateCommand": {
-    "initDevSite": ["python", "installer.py", "--db-type", "mariadb"]
-  }
+  "postCreateCommand": "python  /workspace/installer.py --db-type mariadb"
 }
