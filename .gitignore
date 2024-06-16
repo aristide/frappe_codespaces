@@ -1,0 +1,25 @@
+# mounted volume
+sites
+
+development/*
+!development/README.md
+!development/installer.py
+!development/.vscode/
+
+# Pycharm
+.idea
+
+# VS Code
+.vscode/**
+!.vscode/extensions.json
+
+# VS Code devcontainer
+*.code-workspace
+
+# Python
+*.pyc
+__pycache__
+venv
+
+# NodeJS
+node_modules
