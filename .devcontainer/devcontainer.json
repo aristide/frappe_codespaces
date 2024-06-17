@@ -20,7 +20,9 @@
   },
   "dockerComposeFile": "./docker-compose.yml",
   "service": "frappe",
-  "workspaceFolder": "/workspace/frappe-bench",
+  "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
-  "postCreateCommand": "python  /workspace/installer.py --db-type mariadb"
+  "postCreateCommand": {
+    "initDevSite": ["python", "installer.py", "--db-type", "mariadb"]
+  }
 }
