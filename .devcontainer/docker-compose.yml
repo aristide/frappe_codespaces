@@ -41,6 +41,9 @@ services:
   redis-queue:
     image: docker.io/redis:alpine
 
+  redis-socketio:
+    image: docker.io/redis:alpine
+
   frappe:
     image: docker.io/frappe/bench:latest
     command: sleep infinity
