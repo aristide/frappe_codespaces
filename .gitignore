@@ -1,0 +1,6 @@
+*
+!.devcontainer/*
+!.vscode/*
+!.gitignore
+!installer.py
+!README.md
