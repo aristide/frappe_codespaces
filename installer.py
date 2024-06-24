@@ -242,6 +242,19 @@ def create_site_in_bench(args):
         new_site_cmd,
         cwd=os.getcwd() + "/" + args.bench_name,
     )
+    cprint("Set site developer_mode", level=3)
+    site_config_dev_mode = [
+        "bench",
+        "--site",
+        "development.locahost",
+        "set-config",
+        "developer_mode",
+        "1"
+    ]
+    subprocess.call(
+        site_config_dev_mode,
+        cwd=os.getcwd() + "/" + args.bench_name,
+    )
 
 
 if __name__ == "__main__":
