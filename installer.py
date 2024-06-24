@@ -246,7 +246,7 @@ def create_site_in_bench(args):
     site_config_dev_mode = [
         "bench",
         "--site",
-        "development.locahost",
+        "development.localhost",
         "set-config",
         "developer_mode",
         "1"
